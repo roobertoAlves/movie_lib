@@ -1,0 +1,29 @@
+@import '../../styles/variables.css';
+.skeleton-card {
+  width: 30%;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #111;
+  padding: 1rem;
+}
+
+.skeleton-img {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.skeleton-title {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.skeleton-rating {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.skeleton-btn {
+  border-radius: 4px;
+}

@@ -1,0 +1,102 @@
+@import '../../styles/variables.css';
+.movie-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.movie-card  {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 4px #000a;
+}
+
+.movie-card .movie-card-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.star-icon {
+    font-size: 1.1rem;
+}
+.movie-page {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.movie-page svg {
+    font-size: 1.5rem;
+    color: purple;
+}
+
+.movie-page img, .movie-page card h2, .movie-page card h3, .movie-page card p {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.movie-page img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 12px 0 rgba(105, 105, 105, 0.467);
+    display: block;
+}
+
+.movie-page .movie-card h2 {
+    font-size: 1.2rem;
+}
+
+.movie-page .movie-card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    display: block;
+}
+
+.info h3{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.description {
+    padding-bottom: 10rem;
+}
+.description p{
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.info p{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}

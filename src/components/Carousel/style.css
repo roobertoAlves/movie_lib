@@ -1,0 +1,119 @@
+@import '../../styles/variables.css';
+.carousel-list.animating {
+  pointer-events: none;
+  z-index: 1;
+}
+.carousel-list.animating.right {
+  animation: carousel-slide-right 0.5s cubic-bezier(0.77,0,0.175,1);
+}
+.carousel-list.animating.left {
+  animation: carousel-slide-left 0.5s cubic-bezier(0.77,0,0.175,1);
+}
+
+@keyframes carousel-slide-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateX(-30px) scale(0.98);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateX(-80px) scale(0.97);
+  }
+}
+
+@keyframes carousel-slide-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateX(30px) scale(0.98);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateX(80px) scale(0.97);
+  }
+}
+.carousel-list.animating {
+  opacity: 0.3;
+  transform: scale(0.97) translateY(10px);
+  pointer-events: none;
+}
+.carousel-nav {
+  display: flex;
+  align-items: center;
+}
+.carousel-arrow {
+  background: var(--color-bg);
+  color: var(--color-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 0.7rem;
+  transition: background 0.3s, border 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-arrow.left {
+  margin-right: 0.5rem;
+}
+  .carousel-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
+  }
+  .carousel-item:hover {
+    transform: scale(1.05);
+    background: var(--color-card-hover);
+  }
+
+.carousel-list {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 1rem;
+  width: 100vw;
+  .carousel-movie-title {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 0.3rem;
+  }
+}
+
+.carousel-list::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  width: 210px;
+  min-width: 210px;
+  max-width: 210px;
+  height: 340px;
+  background: var(--color-card);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px #000a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: transform 0.3s;
+  box-sizing: border-box;
+}
+  .carousel-arrow:hover {
+    background: var(--color-primary);
+    border: 2px solid var(--color-border-hover);
+    color: var(--color-text);
+  }
