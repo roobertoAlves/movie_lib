@@ -34,10 +34,10 @@ Movies Library lets you search for movies, view detailed information, and browse
 	- Rename `.env.example` to `.env` (if it exists) or edit the current `.env` file.
 	- Add your imdbapi.dev API key:
 	  ```env
-	  VITE_API_KEY=your_imdbapi_key
-	  VITE_API=https://imdbapi.dev/api/v1/movie/
-	  VITE_SEARCH=https://imdbapi.dev/api/v1/search/movie
-	  VITE_IMG=https://imdbapi.dev/images/
+	  VITE_API_KEY=api_key=YOUR_API_KEY_HERE
+	  VITE_API=https://api.themoviedb.org/3/movie/
+      VITE_SEARCH=https://api.themoviedb.org/3/search/movie
+      VITE_IMG=https://image.tmdb.org/t/p/w500/
 	  ```
 4. **Run the project in development mode:**
 	```powershell
