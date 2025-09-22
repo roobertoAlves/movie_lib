@@ -38,7 +38,6 @@ jobs:
       env:
         VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
         VITE_API: ${{ secrets.VITE_API }}
-        VITE_API_BASE: ${{ secrets.VITE_API_BASE }}
         VITE_SEARCH: ${{ secrets.VITE_SEARCH }}
         VITE_IMG: ${{ secrets.VITE_IMG }}
 

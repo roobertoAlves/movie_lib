@@ -6,8 +6,10 @@ import MovieSkeletons from '../../components/Skeletons/MovieSkeletons/index.jsx'
 
 // Environment variables from GitHub Secrets
 const movieURL = import.meta.env.VITE_API
-const apiBaseURL = import.meta.env.VITE_API_BASE
 const apiKey = import.meta.env.VITE_API_KEY
+
+// Create base URL from movie URL (remove '/movie/' from end)
+const apiBaseURL = movieURL ? movieURL.replace(/\/movie\/?$/, '/') : 'https://api.themoviedb.org/3/'
 
 const genreList = [
   { id: 28, name: 'Ação' },
