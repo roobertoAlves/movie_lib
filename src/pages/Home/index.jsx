@@ -46,7 +46,7 @@ const Home = () => {
     const fetchGenres = async () => {
       const promises = genreList.map(async (genre) => {
         try {
-          const url = `${movieURL.replace(/\/movie\/?$/, '/')}discover/movie?${apiKey}&with_genres=${genre.id}&sort_by=vote_average.desc&vote_count.gte=100&language=pt-BR`;
+          const url = `https://api.themoviedb.org/3/discover/movie?${apiKey}&with_genres=${genre.id}&sort_by=vote_average.desc&vote_count.gte=100&language=pt-BR`;
           const res = await fetch(url);
           const data = await res.json();
           return { id: genre.id, movies: Array.isArray(data.results) ? data.results : [] };
