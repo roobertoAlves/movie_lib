@@ -6,6 +6,7 @@ import MovieSkeletons from '../../components/Skeletons/MovieSkeletons/index.jsx'
 
 // Environment variables from GitHub Secrets
 const movieURL = import.meta.env.VITE_API
+const apiBaseURL = import.meta.env.VITE_API_BASE
 const apiKey = import.meta.env.VITE_API_KEY
 
 const genreList = [
@@ -46,7 +47,7 @@ const Home = () => {
     const fetchGenres = async () => {
       const promises = genreList.map(async (genre) => {
         try {
-          const url = `https://api.themoviedb.org/3/discover/movie?${apiKey}&with_genres=${genre.id}&sort_by=vote_average.desc&vote_count.gte=100&language=pt-BR`;
+          const url = `${apiBaseURL}discover/movie?${apiKey}&with_genres=${genre.id}&sort_by=vote_average.desc&vote_count.gte=100&language=pt-BR`;
           const res = await fetch(url);
           const data = await res.json();
           return { id: genre.id, movies: Array.isArray(data.results) ? data.results : [] };
