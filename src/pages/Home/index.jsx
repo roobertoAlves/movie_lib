@@ -4,6 +4,7 @@ import Carousel from "../../components/Carousel/index.jsx";
 import './style.css'
 import MovieSkeletons from '../../components/Skeletons/MovieSkeletons/index.jsx';
 
+// Environment variables from GitHub Secrets
 const movieURL = import.meta.env.VITE_API
 const apiKey = import.meta.env.VITE_API_KEY
 
