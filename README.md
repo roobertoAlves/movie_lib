@@ -1,7 +1,7 @@
 
 # Movies Library
 
-A web application to explore and search for movies using the imdbapi.dev API. Built with React and Vite, it features dynamic navigation, movie search, detailed views, and a highlight carousel.
+A web application to explore and search for movies using The Movie Database (TMDB) API. Built with React and Vite, it features dynamic navigation, movie search, detailed views, and a highlight carousel.
 
 🎬 **[Live Demo](https://roobertoAlves.github.io/movie_lib)** - Deployed on GitHub Pages
 
