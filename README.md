@@ -3,6 +3,8 @@
 
 A web application to explore and search for movies using the imdbapi.dev API. Built with React and Vite, it features dynamic navigation, movie search, detailed views, and a highlight carousel.
 
+🎬 **[Live Demo](https://roobertoAlves.github.io/movie_lib)** - Deployed on GitHub Pages
+
 ## Introduction
 
 Movies Library lets you search for movies, view detailed information, and browse popular genres. The interface is modern, responsive, and uses skeletons for smooth data loading.
@@ -15,13 +17,14 @@ Movies Library lets you search for movies, view detailed information, and browse
 - [React Icons](https://react-icons.github.io/react-icons/) - SVG icons
 - [React Loading Skeleton](https://github.com/dvtng/react-loading-skeleton) - Skeletons for loading states
 - [ESLint](https://eslint.org/) - Code quality and linting
+- [gh-pages](https://github.com/tschaub/gh-pages) - GitHub Pages deployment
 
 ## How to download and run the project
 
 1. **Clone the repository:**
 	```powershell
-	git clone https://github.com/your-username/movies_library.git
-	cd movies_library
+	git clone https://github.com/roobertoAlves/movie_lib.git
+	cd movie_lib
 	```
 2. **Install dependencies:**
 	```powershell
@@ -42,6 +45,26 @@ Movies Library lets you search for movies, view detailed information, and browse
 	```
 5. **Access in your browser:**
 	- Open [http://localhost:5173](http://localhost:5173)
+
+## Deployment
+
+The project is configured for automatic deployment to GitHub Pages:
+
+1. **Build and deploy:**
+	```powershell
+	npm run deploy
+	```
+	This command will:
+	- Build the project (`npm run build`)
+	- Deploy the `dist` folder to GitHub Pages
+
+2. **Manual deployment:**
+	```powershell
+	npm run build
+	gh-pages -d dist
+	```
+
+The live application is available at: [https://roobertoAlves.github.io/movie_lib](https://roobertoAlves.github.io/movie_lib)
 
 ## Folder structure
 
