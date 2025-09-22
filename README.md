@@ -31,14 +31,19 @@ Movies Library lets you search for movies, view detailed information, and browse
 	npm install
 	```
 3. **Configure the `.env` file:**
-	- Rename `.env.example` to `.env` (if it exists) or edit the current `.env` file.
-	- Add your imdbapi.dev API key:
-	  ```env
-	  VITE_API_KEY=your_imdbapi_key
-	  VITE_API=https://imdbapi.dev/api/v1/movie/
-	  VITE_SEARCH=https://imdbapi.dev/api/v1/search/movie
-	  VITE_IMG=https://imdbapi.dev/images/
+	- Copy `.env.example` to `.env`:
+	  ```powershell
+	  cp .env.example .env
 	  ```
+	- Get your API key from [The Movie Database (TMDB)](https://www.themoviedb.org/settings/api)
+	- Edit the `.env` file and replace `YOUR_API_KEY_HERE` with your actual API key:
+	  ```env
+	  VITE_API_KEY=api_key=your_actual_api_key_here
+	  VITE_API=https://api.themoviedb.org/3/movie/
+	  VITE_SEARCH=https://api.themoviedb.org/3/search/movie
+	  VITE_IMG=https://image.tmdb.org/t/p/w500/
+	  ```
+
 4. **Run the project in development mode:**
 	```powershell
 	npm run dev
@@ -48,21 +53,31 @@ Movies Library lets you search for movies, view detailed information, and browse
 
 ## Deployment
 
-The project is configured for automatic deployment to GitHub Pages:
+The project is configured for automatic deployment to GitHub Pages using GitHub Actions:
 
-1. **Build and deploy:**
+### Automated Deployment (Recommended)
+
+1. **Configure GitHub Secrets:**
+   - Go to your repository on GitHub
+   - Navigate to Settings → Secrets and variables → Actions
+   - Add the following secrets:
+     - `VITE_API_KEY`: Your TMDB API key (format: `api_key=your_key_here`)
+     - `VITE_API`: `https://api.themoviedb.org/3/movie/`
+     - `VITE_SEARCH`: `https://api.themoviedb.org/3/search/movie`
+     - `VITE_IMG`: `https://image.tmdb.org/t/p/w500/`
+
+2. **Automatic deployment:**
+   - Push your changes to the `main` branch
+   - GitHub Actions will automatically build and deploy
+   - The workflow injects the environment variables during build time
+
+### Manual Deployment (Alternative)
+
+1. **Build and deploy locally:**
 	```powershell
 	npm run deploy
 	```
-	This command will:
-	- Build the project (`npm run build`)
-	- Deploy the `dist` folder to GitHub Pages
-
-2. **Manual deployment:**
-	```powershell
-	npm run build
-	gh-pages -d dist
-	```
+	⚠️ **Note**: This method requires environment variables to be available locally
 
 The live application is available at: [https://roobertoAlves.github.io/movie_lib](https://roobertoAlves.github.io/movie_lib)
 
@@ -75,8 +90,10 @@ The live application is available at: [https://roobertoAlves.github.io/movie_lib
 
 ## Notes
 
-- Make sure to get a valid API key from [imdbapi.dev](https://imdbapi.dev/) to access movie data.
+- Make sure to get a valid API key from [The Movie Database (TMDB)](https://www.themoviedb.org/settings/api) to access movie data.
 - The project uses environment variables to easily switch endpoints and keys.
+- The `.env` file is ignored by Git for security reasons - never commit API keys!
+- Use the `.env.example` file as a template for your local environment setup.
 
 ---
 Developed by Jose Roberto Damasceno
