@@ -29,7 +29,7 @@ const Home = () => {
     const fetchTopMovies = async () => {
       setLoading(true);
       try {
-        const url = `${movieURL}top_rated?${apiKey}&language=pt-BR`;
+        const url = `${cleanMovieURL}top_rated?${apiKey}&language=pt-BR`;
         const res = await fetch(url);
         const data = await res.json();
 

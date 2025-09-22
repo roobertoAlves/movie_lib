@@ -12,6 +12,8 @@ import { FaTheaterMasks } from 'react-icons/fa';
 const movieURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
+const cleanMovieURL = movieURL ? movieURL.trim() : ''
+
 const Movie = () => {
 
   const { id } = useParams();
@@ -39,7 +41,7 @@ const Movie = () => {
       setMovie(null);
       return;
     }
-    const movieURLWithId = `${movieURL}${id}?${apiKey}&language=pt-BR`;
+    const movieURLWithId = `${cleanMovieURL}${id}?${apiKey}&language=pt-BR`;
     getMovie(movieURLWithId);
   }, [id])
 
