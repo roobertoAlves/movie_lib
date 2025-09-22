@@ -11,7 +11,7 @@ import Search from './pages/Search/index.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/movie_lib">
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
