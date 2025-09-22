@@ -11,6 +11,9 @@ const apiKey = import.meta.env.VITE_API_KEY
 // Create base URL from movie URL (remove '/movie/' from end)
 const apiBaseURL = movieURL ? movieURL.replace(/\/movie\/?$/, '/') : 'https://api.themoviedb.org/3/'
 
+// Debug: log URLs to verify they're correct
+console.log('🔍 Debug URLs:', { movieURL, apiBaseURL, apiKey: apiKey ? 'SET' : 'NOT SET' })
+
 const genreList = [
   { id: 28, name: 'Ação' },
   { id: 35, name: 'Comédia' },
