@@ -4,15 +4,18 @@ import Carousel from "../../components/Carousel/index.jsx";
 import './style.css'
 import MovieSkeletons from '../../components/Skeletons/MovieSkeletons/index.jsx';
 
-// Environment variables from GitHub Secrets
 const movieURL = import.meta.env.VITE_API
 const apiKey = import.meta.env.VITE_API_KEY
 
-// Create base URL from movie URL (remove '/movie/' from end)
-const apiBaseURL = movieURL ? movieURL.replace(/\/movie\/?$/, '/') : 'https://api.themoviedb.org/3/'
+const cleanMovieURL = movieURL ? movieURL.trim() : ''
+const apiBaseURL = cleanMovieURL ? cleanMovieURL.replace(/\/movie\/?$/, '/') : 'https://api.themoviedb.org/3/'
 
-// Debug: log URLs to verify they're correct
-console.log('🔍 Debug URLs:', { movieURL, apiBaseURL, apiKey: apiKey ? 'SET' : 'NOT SET' })
+console.log('🔍 Debug URLs:', { 
+  movieURL: `"${movieURL}"`, 
+  cleanMovieURL: `"${cleanMovieURL}"`,
+  apiBaseURL: `"${apiBaseURL}"`, 
+  apiKey: apiKey ? 'SET' : 'NOT SET' 
+})
 
 const genreList = [
   { id: 28, name: 'Ação' },
